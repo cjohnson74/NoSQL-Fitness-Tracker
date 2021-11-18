@@ -34,4 +34,8 @@ router.post('/workouts', ({ body }, res) => {
     });
 });
 
+router.get('/workouts/range', (req, res) => {
+
+});
+
 module.exports = router;
