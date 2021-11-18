@@ -29,6 +29,9 @@ router.post('/workouts', ({ body }, res) => {
     .then((dbWorkout) => {
         res.status(200).json(dbWorkout);
     })
+    .catch((err) => {
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;
