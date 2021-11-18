@@ -3,6 +3,7 @@ const Workout = require('../models/workout.js');
 
 router.post('/workouts', (req, res) => {
     // add code here
+    Workout.find({})
 });
 
 router.put('/workouts/:id', ({ body, params }, res) => {
