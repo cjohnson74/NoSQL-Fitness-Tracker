@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Workout = require('../models/workout.js');
 
 router.get('/workouts', (req, res) => {
-    // add code here
+    // find all workouts in the db
     Workout.find({})
     .then(dbWorkout => {
         res.status(200).json(dbWorkout);
@@ -13,7 +13,7 @@ router.get('/workouts', (req, res) => {
 });
 
 router.put('/workouts/:id', ({ body, params }, res) => {
-    // add code here
+    // find a workout in the db and update it
     Workout.findOneAndUpdate(params.id, body)
     .then(dbWorkout => {
         res.status(200).json(dbWorkout, "Workout successfully updated.")
@@ -23,8 +23,9 @@ router.put('/workouts/:id', ({ body, params }, res) => {
     })
 });
 
-router.post('/workouts', (req, res) => {
-
+router.post('/workouts', ({ body }, res) => {
+    // create a workout and add it to the db
+    Workout.create(body)
 });
 
 module.exports = router;
