@@ -35,7 +35,9 @@ router.post('/workouts', ({ body }, res) => {
 });
 
 router.get('/workouts/range', (req, res) => {
-
+    // get all workout data from back-end
+    Workout.find({})
+    
 });
 
 module.exports = router;
