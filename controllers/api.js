@@ -40,6 +40,9 @@ router.get('/workouts/range', (req, res) => {
     .then((dbWorkout) => {
         res.status(200).json(dbWorkout)
     })
+    .catch((err) => {
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;
