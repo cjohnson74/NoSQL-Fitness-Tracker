@@ -11,6 +11,7 @@ router.post('/workouts', (req, res) => {
 
 router.put('/workouts/:id', ({ body, params }, res) => {
     // add code here
+    Workout.findOneAndUpdate(params.id, body)
 });
 
 
