@@ -16,7 +16,7 @@ router.put('/workouts/:id', ({ body, params }, res) => {
     // find a workout in the db and update it
     Workout.findOneAndUpdate(params.id, body)
     .then((dbWorkout) => {
-        res.status(200).json(dbWorkout, "Workout successfully updated.")
+        res.status(200).json(dbWorkout)
     })
     .catch((err) => {
         res.status(500).json(err);
@@ -37,7 +37,9 @@ router.post('/workouts', ({ body }, res) => {
 router.get('/workouts/range', (req, res) => {
     // get all workout data from back-end
     Workout.find({})
-    
+    .then((dbWorkout) => {
+        res.status(200).json(dbWorkout)
+    })
 });
 
 module.exports = router;
