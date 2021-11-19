@@ -14,11 +14,11 @@ router.get('/workouts', (req, res) => {
 
 router.put('/workouts/:id', ({ body, params }, res) => {
     // find a workout in the db and update it
-    Workout.findOneAndUpdate(params.id, body)
-    .then((dbWorkout) => {
-        res.json(dbWorkout)
+    Workout.findOneAndUpdate(params.id, {body})
+    .then(dbWorkout => {
+        res.json(dbWorkout);
     })
-    .catch((err) => {
+    .catch(err => {
         res.status(500).json(err);
     });
 });
@@ -26,10 +26,10 @@ router.put('/workouts/:id', ({ body, params }, res) => {
 router.post('/workouts', ({ body }, res) => {
     // create a workout and add it to the db
     Workout.create(body)
-    .then((dbWorkout) => {
+    .then(dbWorkout => {
         res.json(dbWorkout);
     })
-    .catch((err) => {
+    .catch(err => {
         res.status(500).json(err);
     });
 });
@@ -37,10 +37,10 @@ router.post('/workouts', ({ body }, res) => {
 router.get('/workouts/range', (req, res) => {
     // get all workout data from back-end
     Workout.find({})
-    .then((dbWorkout) => {
-        res.json(dbWorkout)
+    .then(dbWorkout => {
+        res.json(dbWorkout);
     })
-    .catch((err) => {
+    .catch(err => {
         res.status(500).json(err);
     });
 });
