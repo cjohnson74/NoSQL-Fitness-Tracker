@@ -3,7 +3,13 @@ const Workout = require('../models/workout.js');
 
 router.get('/workouts', (req, res) => {
     // find all workouts in the db
-    Workout.find({})
+    Workout.aggregate([{
+        $addFields: {
+            totalDuration: {
+                $sum: "$exercises.duration",
+            }
+        }
+    }])
     .then((dbWorkout) => {
         res.json(dbWorkout);
     })
@@ -37,7 +43,13 @@ router.post('/workouts', ({ body }, res) => {
 
 router.get('/workouts/range', (req, res) => {
     // get all workout data from back-end
-    Workout.find({})
+    Workout.find([{
+        $addFields: {
+            totalDuration: {
+                $sum: "$exercises.duration",
+            }
+        }
+    }])
     .then(dbWorkout => {
         res.json(dbWorkout);
     })
