@@ -14,7 +14,7 @@ router.get('/workouts', (req, res) => {
 
 router.put('/workouts/:id', ({ body, params }, res) => {
     // find a workout in the db and update it
-    Workout.findOneAndUpdate(params.id, {body})
+    Workout.findOneAndUpdate(params.id, body)
     .then(dbWorkout => {
         res.json(dbWorkout);
     })
@@ -25,7 +25,8 @@ router.put('/workouts/:id', ({ body, params }, res) => {
 
 router.post('/workouts', ({ body }, res) => {
     // create a workout and add it to the db
-    Workout.create(body)
+    console.log(body);
+    Workout.insert(body)
     .then(dbWorkout => {
         res.json(dbWorkout);
     })
