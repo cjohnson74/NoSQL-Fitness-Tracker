@@ -1,6 +1,25 @@
 # NoSQL-Fitness-Tracker
 I created a workout tracker that has a Mongo database with a Mongoose schema and handles routes with express.
 
+## User Story
+
+As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+
+## Business Context
+
+A consumer will reach their fitness goals more quickly when they track their workout progress.
+
+## Technologies
+
+### HTML
+### CSS
+### Javascript
+### Express
+### Morgan
+### Mongoose
+### API
+### Model View Controller
+
 ## Live Heroku Site
 <a href="https://mongo-fitness-tracker-app.herokuapp.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
