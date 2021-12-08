@@ -21,7 +21,7 @@ A consumer will reach their fitness goals more quickly when they track their wor
 ### Model View Controller
 
 ## Live Heroku Site
-<a href="https://mongo-fitness-tracker-app.herokuapp.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/></a>
+<a href="https://mongo-fitness-tracker-app.herokuapp.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/></a> <- Clickable Link
 
 ## Screenshots
 ![Fitness-Tracker-Homepage](https://user-images.githubusercontent.com/52815609/143382461-c448acb6-bd7e-4206-a3c0-5f65c4210a4f.png)
